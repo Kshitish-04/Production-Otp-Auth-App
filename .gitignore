@@ -1,0 +1,62 @@
+
+---
+
+## 📌 .gitignore (create at root level)
+
+`mern-otp-auth/.gitignore`
+
+```gitignore
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Logs
+logs
+*.log
+
+# Environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build
+dist/
+build/
+.cache/
+
+# Vite
+.vite/
+
+---
+
+## 📌 .gitignore (create at root level)
+
+`mern-otp-auth/.gitignore`
+
+```gitignore
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Logs
+logs
+*.log
+
+# Environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build
+dist/
+build/
+.cache/
+
+# Vite
+.vite/
