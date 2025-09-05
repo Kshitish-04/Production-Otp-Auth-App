@@ -5,7 +5,7 @@ import cors from "cors";
 import authRoutes from "./routes/authRoutes.js";
 import dotenv from "dotenv";
 dotenv.config();
-
+//connect
 connectDB();
 
 const app = express();
