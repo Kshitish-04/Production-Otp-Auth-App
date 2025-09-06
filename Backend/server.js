@@ -10,11 +10,23 @@ connectDB();
 
 const app = express();
 app.use(express.json())
-app.use(cors());
+// app.use(cors())
+app.use(cors({
+    origin: [
+        'https://production-otp-auth-app.vercel.app',  // Add your actual Vercel URL
+        'http://localhost:5173',              // For local development
+        'http://localhost:3000'               // Alternative local port
+    ],
+    credentials: true
+}));
+app.get("/", (req, res) => {
+    res.send("API is running..");
+});
  
 app.use("/api/auth", authRoutes);
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT,()=> {
+// Updated to listen on 0.0.0.0 for Render compatibility
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server running on port ${PORT}`)     
-}) 
+});
