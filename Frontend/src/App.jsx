@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react'
+import React from 'react'
+import { useEffect } from 'react';
 import './App.css';
 import Home from './pages/Home';
 import Signup from './pages/Signup';
@@ -13,7 +14,7 @@ const App = () => {
   useEffect(() => {
     const wakeUpBackend = async () => {
       try {
-        await fetch('https://your-app-name.onrender.com/');
+        await fetch('https://production-otp-auth-app.onrender.com/');
         console.log('✅ Backend wake-up successful');
       } catch (error) {
         console.log('🚀 Backend wake-up request sent');
@@ -22,7 +23,8 @@ const App = () => {
     
     wakeUpBackend();
   }, []);
-
+  
+  // Routes
   return (
     <div>
       <Routes>
@@ -35,5 +37,7 @@ const App = () => {
     </div>
   )
 }
+
+// export default App;
 
 export default App
