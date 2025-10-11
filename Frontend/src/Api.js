@@ -1,7 +1,9 @@
 import axios from 'axios';
 
-// const API = axios.create({baseURL: 'http://localhost:5000/api/auth'})
-const API = axios.create({baseURL: 'https://production-otp-auth-app.onrender.com/api/auth'})
+const API = axios.create({
+  baseURL: process.env.NODE_ENV === 'production' 
+    ? 'https://your-backend-url.vercel.app/api/auth'
+    : 'http://localhost:5000/api/auth'
+});
 
-//API.interceptors.request.use((req) => {})
 export default API; 
